@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nginx.css">
+    <title>Web Servers Overview</title>
+</head>
+<body>
+
+<header>
+    <h1>Web Servers Overview</h1>
+</header>
+
+<main>
+    <section>
+        <h2>What is a Web Server?</h2>
+        <p>A web server is a system that stores, processes, and delivers web pages to clients. It uses the Hypertext Transfer Protocol (HTTP) to communicate with users, serving both static and dynamic content. Web servers can also handle requests for other types of resources, such as images, videos, and files.</p>
+    </section>
+
+    <section>
+        <h2>Client-Server Model</h2>
+        <p>The client-server model is a distributed application structure that partitions tasks between service providers (servers) and service requesters (clients). Clients send requests to the server, which processes the request and returns the appropriate response. This model allows for efficient resource sharing and management in networked environments.</p>
+    </section>
+
+    <section>
+        <h2>Types of Servers</h2>
+        <ul>
+            <li><strong>Web Server:</strong> Serves web pages to clients using HTTP/HTTPS protocols.</li>
+            <li><strong>Application Server:</strong> Provides business logic to application programs through various protocols, often serving dynamic content.</li>
+            <li><strong>Database Server:</strong> Provides database services to other computer programs or computers, handling data storage and retrieval.</li>
+            <li><strong>File Server:</strong> Stores and manages files, allowing multiple clients to access and share files over a network.</li>
+            <li><strong>Proxy Server:</strong> Acts as an intermediary for requests from clients seeking resources from other servers, often used for anonymity and security.</li>
+            <li><strong>Mail Server:</strong> Manages the sending and receiving of emails, handling protocols such as SMTP, POP3, and IMAP.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Nginx</h2>
+        <p>Nginx is a high-performance web server known for its speed, stability, and low resource consumption. It is commonly used as a reverse proxy server, load balancer, and HTTP cache. Nginx can handle a large number of concurrent connections, making it ideal for serving static content and handling high-traffic websites. Its asynchronous architecture allows it to efficiently serve multiple requests without blocking.</p>
+    </section>
+
+    <section>
+        <h2>Apache HTTP Server</h2>
+        <p>The Apache HTTP Server, commonly referred to as Apache, is one of the oldest and most widely used web servers. It is open-source and highly customizable through the use of modules. Apache supports various protocols, including HTTP/2 and HTTPS, and can run on different operating systems, including UNIX, Linux, and Windows. Its flexibility makes it suitable for a wide range of applications, from small personal websites to large enterprise-level solutions.</p>
+    </section>
+
+    <section>
+        <h2>Comparison of Nginx and Apache</h2>
+        <p>Both Nginx and Apache serve different use cases:</p>
+        <ul>
+            <li><strong>Performance:</strong> Nginx is designed for high concurrency, while Apache excels in handling complex configurations and dynamic content.</li>
+            <li><strong>Configuration:</strong> Nginx uses a simpler configuration syntax compared to Apache, which can be more complex due to its extensive features.</li>
+            <li><strong>Resource Usage:</strong> Nginx generally uses less memory and CPU resources, making it more efficient for serving static files.</li>
+            <li><strong>Support for Dynamic Content:</strong> Apache has built-in support for dynamic content through various modules, while Nginx requires additional configurations to handle dynamic requests.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>Understanding the roles and functionalities of web servers is crucial for web development and deployment. Both Nginx and Apache have their strengths, and the choice between them often depends on the specific requirements of the project.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Web Servers Overview</p>
+</footer>
+
+</body>
+</html>
