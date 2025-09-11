@@ -15,5 +15,9 @@
 - Nginx is often used in combination with other web servers, such as Apache, to improve performance and scalability.
 - It is also commonly used in cloud computing and containerized environments.
 
-## Works
+## Nginx Architecture
+<img width="1024" height="569" alt="image-5" src="https://github.com/user-attachments/assets/5ccb5f80-f8b0-4819-ab67-de26203ab3ab" />
+
+## How it Works
 - It handles requests from browsers by serving static files, forwarding requests to other servers, and managing traffic.
+  
