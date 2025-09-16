@@ -1,32 +1,41 @@
 #!/bin/bash
 #
-############################################################################################
-# ======================= Install and configure Nginx web server ===========================
-#
-# testing
-set +xeuo pipefail
+##################################################################################
+# ===================== install and configure nginx server ===================== #
 #
 # define variables
 SUDO='sudo'
+#
+# testing (set - for debugging)
+set +xeuo pipefail
 
-# update system
-echo "Update the system"
-$SUDO apt update -y
+# update ubuntu
+echo " 🛠️ Updating Ubuntu packages..."
+$SUDO apt update
 echo ""
 
-# install nginx
-echo "Install Nginx web server"
-$SUDO apt install nginx -y
-echo ""
+# check if nginx is installed
+nginx -v &>/dev/null
 
-# start the service of nginx
-echo "Start the Nginx service"
-$SUDO systemctl start nginx.service
+if [[ $? -eq 0 ]]; then
+    echo "Nginx is already installed"
+    exit 0
+else
+    echo "Nginx is not installed"
+    echo " 📦 Installing Nginx web server..."
+    $SUDO apt install nginx -y
+    echo ""
+fi
+
+# start and enable nginx service
+echo " 🚀 Starting and enabling Nginx service..."
+$SUDO systemctl start nginx
+$SUDO systemctl enable nginx
 echo ""
 
 # check status of nginx
 echo "Check the status of Nginx service"
-$SUDO systemctl is-active nginx.service
+$SUDO systemctl is-active nginx.service && echo "Nginx is active" || echo "Nginx is not active"
 echo ""
 
 # =================================== End of script =====================================
